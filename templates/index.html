@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Name</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h2>Enter Your Name:</h2>
+    <form method="post">
+        <input type="text" name="username" placeholder="Your Name">
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if name %}
+        <h3>Hello, {{ name }}!</h3>
+    {% endif %}
+</body>
+</html>
